@@ -1,3 +1,8 @@
+--[[
+	Credits to OWNER of Infinite Yield (IY)
+]]
+
+
 if IY_LOADED and not _G.IY_DEBUG == true then
     -- error("Infinite Yield is already running!", 0)
     return
@@ -4348,6 +4353,7 @@ CMDs[#CMDs + 1] = {NAME = 'explorer / dex', DESC = 'Opens DEX by Moon'}
 CMDs[#CMDs + 1] = {NAME = 'olddex / odex', DESC = 'Opens Old DEX by Moon'}
 CMDs[#CMDs + 1] = {NAME = 'remotespy / rspy', DESC = 'Opens Simple Spy V3'}
 CMDs[#CMDs + 1] = {NAME = 'hydroxide / hyd', DESC = 'Opens Hydroxide'}
+CMDs[#CMDs + 1] = {NAME = 'universalhub / unhub', DESC = 'Opens a random universal hub'}
 CMDs[#CMDs + 1] = {NAME = 'audiologger / alogger', DESC = 'Opens Edges audio logger'}
 CMDs[#CMDs + 1] = {NAME = 'serverinfo / info', DESC = 'Gives you info about the server'}
 CMDs[#CMDs + 1] = {NAME = 'jobid', DESC = 'Copies the games JobId to your clipboard'}
@@ -10311,6 +10317,29 @@ addcmd('hydroxide',{'hyd'},function(args, speaker)
 
   webImport("init")
   webImport("ui/main")
+end)
+
+addcmd('universalhub',{'unhub'},function(args, speaker)
+	notify("Loading",'Hold on a sec')
+	-- Full credit to all the owners of the universal hubs
+	local randomval = math.random(1, 8)
+	if randomval == 1 then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/KojiArchives/CHK/refs/heads/main/CHK.md",true))()
+	elseif randomval == 2 then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/KojiArchives/SHK/refs/heads/main/SHK.md",true))()
+	elseif randomval == 3 then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/KojiArchives/DHK/refs/heads/main/DHK.md",true))()
+	elseif randomval == 4 then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/KojiArchives/KHK/refs/heads/main/KHK.md",true))()
+	elseif randomval == 5 then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/KojiArchives/AHK/refs/heads/main/AHK.md",true))()
+	elseif randomval == 6 then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/KojiArchives/BSK/refs/heads/main/BSK.md",true))()
+	elseif randomval == 7 then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Juanko-Scripts/Roblox-scripts/refs/heads/main/yJUANKO%20UNIVERSAL%20HUB.txt"))()
+	elseif randomval == 8 then
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptBrv/VHU/refs/heads/main/VHU.md",true))()
+	end
 end)
 
 addcmd('audiologger',{'alogger'},function(args, speaker)
